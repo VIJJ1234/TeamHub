@@ -1,0 +1,620 @@
+.join-event-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+  min-height: 100vh;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.join-event-container {
+  background: #1f1f1f;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid #333;
+  animation: slideUp 0.6s ease-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.join-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #ff4081, #e91e63);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 8px rgba(255, 64, 129, 0.4);
+}
+
+/* Event information section - shows event details and requirements */
+.event-info {
+  background: #242424;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid #333;
+}
+
+.event-info h3 {
+  color: #ff4081;
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+}
+
+.event-info p {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+/* Message shown when no teams meet the event requirements */
+.no-teams-message {
+  text-align: center;
+  padding: 2rem;
+  background: #2a2a2a;
+  border-radius: 12px;
+  border: 1px solid #444;
+  margin: 2rem 0;
+}
+
+.no-teams-message p {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+/* Container for team status badges */
+.team-status {
+  margin-top: 0.5rem;
+}
+
+/* Status badge styling for team suitability indicators */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Green badge for teams that meet event requirements */
+.status-badge.suitable {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+/* Red badge for teams that don't meet event requirements */
+.status-badge.unsuitable {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border: 1px solid #f44336;
+}
+
+.event-summary {
+  text-align: center;
+  background: #242424;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 3rem;
+  border: 1px solid #333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event-summary h3 {
+  margin: 0 0 1rem;
+  color: #ff4081;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.event-summary p {
+  margin: 0;
+  color: #ccc;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.countdown {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #e91e63;
+  font-size: 1.1rem;
+}
+
+.form-step {
+  background: #242424;
+  border-radius: 16px;
+  padding: 3rem;
+  border: 1px solid #333;
+  margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-step h3 {
+  color: #ff4081;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e91e63;
+  display: inline-block;
+  text-align: left;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #333;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #2a2a2a;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aaa;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #ff4081;
+  box-shadow: 0 0 0 3px rgba(255, 64, 129, 0.2);
+  transform: translateY(-2px);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.member-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.member-inputs input {
+  margin-bottom: 0;
+}
+
+.form-btn {
+  padding: 0.875rem 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  box-sizing: border-box;
+}
+
+.form-btn.primary {
+  background: linear-gradient(135deg, #ff4081, #e91e63);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
+}
+
+.form-btn.primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 64, 129, 0.4);
+}
+
+.form-btn.secondary {
+  background: transparent;
+  color: #ff4081;
+  border: 2px solid #ff4081;
+}
+
+.form-btn.secondary:hover {
+  background: #ff4081;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 64, 129, 0.3);
+}
+
+.step-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.checkbox {
+  display: flex !important;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #ccc;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox input[type="checkbox"] {
+  width: auto !important;
+  margin: 0 !important;
+  transform: scale(1.2);
+  accent-color: #ff4081;
+}
+
+/* Single button alignment */
+.form-step > .form-btn:only-of-type {
+  margin-top: 2rem;
+  margin-left: auto;
+  display: block;
+  width: fit-content;
+}
+
+/* Registration Options */
+.registration-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.option-card {
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.option-card:hover {
+  border-color: #ff4081;
+}
+
+.radio-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.radio-option input[type="radio"] {
+  margin-top: 0.2rem;
+  transform: scale(1.2);
+  accent-color: #ff4081;
+}
+
+.option-content h4 {
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.option-content p {
+  margin: 0;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.team-selector {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+}
+
+.team-selector select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.team-selector select:focus {
+  outline: none;
+  border-color: #ff4081;
+}
+
+.team-preview {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.team-preview h5 {
+  margin: 0 0 0.75rem 0;
+  color: #ff4081;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.team-members {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.member-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: #1a1a1a;
+  border-radius: 6px;
+}
+
+.member-preview span {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.member-preview .email {
+  color: #ccc;
+  font-size: 0.8rem;
+}
+
+.loading-teams {
+  text-align: center;
+  padding: 2rem;
+  color: #ccc;
+}
+
+.team-info-display {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-info-display h4 {
+  margin: 0 0 1rem 0;
+  color: #ff4081;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.team-details {
+  margin-bottom: 1.5rem;
+}
+
+.detail-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.detail-row strong {
+  color: #fff;
+  min-width: 120px;
+}
+
+.additional-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.additional-fields input {
+  padding: 0.75rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.additional-fields input:focus {
+  outline: none;
+  border-color: #ff4081;
+}
+
+.member-inputs {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.remove-member-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.remove-member-btn:hover {
+  background: #c0392b;
+  transform: scale(1.1);
+}
+
+.form-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #666;
+}
+
+.form-btn:disabled:hover {
+  background: #666;
+  transform: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .join-event-page {
+    padding: 1rem;
+  }
+  
+  .join-event-container {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .join-title {
+    font-size: 2rem;
+  }
+  
+  .form-step {
+    padding: 2rem;
+  }
+  
+  .member-inputs {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .member-inputs input {
+    margin-bottom: 1rem;
+  }
+  
+  .step-buttons {
+    flex-direction: column;
+  }
+  
+  .form-btn {
+    width: 100%;
+  }
+
+  .registration-options {
+    gap: 0.75rem;
+  }
+  
+  .option-card {
+    padding: 1rem;
+  }
+  
+  .radio-option {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .member-inputs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .remove-member-btn {
+    align-self: flex-end;
+    margin-top: -0.5rem;
+  }
+  
+  .member-preview {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .join-event-page {
+    padding: 0.5rem;
+  }
+  
+  .join-event-container {
+    padding: 1rem;
+  }
+  
+  .join-title {
+    font-size: 1.75rem;
+  }
+  
+  .form-step {
+    padding: 1.5rem;
+  }
+  
+  .form-step h3 {
+    font-size: 1.25rem;
+  }
+  
+  .option-card {
+    padding: 0.75rem;
+  }
+  
+  .team-preview {
+    padding: 0.75rem;
+  }
+  
+  .team-info-display {
+    padding: 1rem;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .detail-row strong {
+    min-width: auto;
+  }
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.team-card {
+  background: #1f1f1f;
+  border: 1px solid #333;
+  padding: 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  border-color: #4cafef;
+  transform: translateY(-2px);
+}
+
+.team-card.selected {
+  border: 2px solid #4cafef;
+  background: #2a2a2a;
+}

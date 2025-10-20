@@ -1,0 +1,48 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000; /* Ensure it sits above all page content */
+}
+
+.modal {
+  background-color: #1f1f1f;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: center;
+  box-shadow: 0 0 20px #000;
+}
+
+.modal img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.modal button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ff4081;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;      /* Makes it circular */
+  object-fit: cover;       /* Ensures image doesn’t stretch */
+  border: 2px solid #fff;  /* Optional: white border */
+  margin-bottom: 1rem;
+}
